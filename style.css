@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #1d1b67;
+  --muted-color: #425466;
+  --black: #000000;
+  --hero-bg-color: #46ccde;
+  --section-bg: #cdf9ff;
+  --section-heading: #3b60bf;
+  --section-title: #005661;
+
+  --text-xl: 2.25rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+header {
+  padding: 2.5rem 1.25rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__cta,
+.main__nav {
+  display: none;
+}
+.hero {
+  margin-bottom: 3rem;
+}
+.hero__content {
+  padding: 1.25rem;
+}
+.hero__title {
+  color: var(--primary-color);
+  font-size: var(--text-xl);
+  margin-bottom: 0.5rem;
+}
+.hero__desc {
+  color: var(--muted-color);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.btn__container {
+  margin-bottom: 2rem;
+}
+.btn {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  color: var(--muted-color);
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cta {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.copy__container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--muted-color);
+}
+.check {
+  align-self: flex-start;
+}
+.copy span {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hero__image {
+  padding: 3rem 2rem;
+  background-color: var(--hero-bg-color);
+}
+.hero__image img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .nav__cta,
+  .main__nav {
+    display: block;
+  }
+  .left {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .nav__link {
+    color: var(--muted-color);
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100vh;
+  }
+  .hero__image {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__content,
+  .hero__image {
+    padding-top: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --text-xl: 3.5rem;
+  }
+  header {
+    padding: 2.5rem 6rem;
+  }
+  .hero__content {
+    padding: 10rem 6rem 2rem 6rem;
+  }
+  .hero__image {
+    padding: 6rem 2rem 0 2rem;
+  }
+  .hero__image img {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
